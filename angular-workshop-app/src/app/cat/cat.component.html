@@ -1,0 +1,11 @@
+
+<button (click)="onClick()">Get Random Cat Fact</button>
+
+<br>
+
+<div *ngIf="facts.length > 0">
+  <h2>All Facts:</h2>
+  <ul>
+    <li *ngFor="let fact of facts">{{ fact.fact |json}}</li>
+  </ul>
+</div>

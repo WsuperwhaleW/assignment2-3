@@ -1,28 +1,42 @@
-<p>assignment-2 works!</p>
 
-<form [formGroup]="myForm">
-    <div>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" appFormStyle>
+  <div>
       <div>
-        <label for="name">Name:</label>
-        <input id="name" formControlName="name" type="string">
+          <label for="name">Name:</label>
+          <input id="name" formControlName="name" type="string">
       </div>
       <div>
-        <label for="age">Age:</label>
-        <input id="age" formControlName="age" type="number">
+          <label for="age">Age:</label>
+          <input id="age" formControlName="age" type="number">
       </div>
       <div>
-        <label for="email">Email:</label>
-        <input id="email" formControlName="email" type="string">
+          <label for="sex">Gender:</label>
+          <select id="sex" formControlName="sex">
+          <option *ngFor="let gender of genders" [value]="gender">{{ gender }}</option>
+          </select>
       </div>
       <div>
-        <label for="password">Password:</label>
-        <input id="password" formControlName="password" type="password">
+          <label for="email">Email:</label>
+          <input id="email" formControlName="email" type="string">
       </div>
-    </div>
-    
-    <button type="submit" [disabled]="!myForm.valid">Submit</button>
-  </form>
+      <div>
+          <label for="password">Password:</label>
+          <input id="password" formControlName="password" type="password">
+      </div>
+  </div>
+  
+  <button type="submit" [disabled]="!myForm.valid">Submit</button>
+</form>
 
-  <pre>{{myForm.value|json}}</pre>
+
+<div *ngIf="formData">
+  <pre>{{formData | json}}</pre>
+</div>
+<div *ngIf="!formData">
+  <pre>Please submit form fo us to collect data</pre>
+</div>
+
+
+
 
   
