@@ -1,0 +1,28 @@
+<p>assignment-2 works!</p>
+
+<form [formGroup]="myForm">
+    <div>
+      <div>
+        <label for="name">Name:</label>
+        <input id="name" formControlName="name" type="string">
+      </div>
+      <div>
+        <label for="age">Age:</label>
+        <input id="age" formControlName="age" type="number">
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" type="string">
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input id="password" formControlName="password" type="password">
+      </div>
+    </div>
+    
+    <button type="submit" [disabled]="!myForm.valid">Submit</button>
+  </form>
+
+  <pre>{{myForm.value|json}}</pre>
+
+  
