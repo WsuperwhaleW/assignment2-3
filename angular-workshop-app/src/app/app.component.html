@@ -1,13 +1,15 @@
 
-<div style="display: flex;">
-  <nav style="width: 200px; margin-right: 20px;">
+<title>Dashboard</title>
+<div class="main-content">
+  <h1>Welcome to the Assignment 3</h1>
+  <p>Select an option to get started.</p>
+  <nav class="sidebar">
     <ul>
       <li><a routerLink="/home">Home</a></li>
       <li><a routerLink="/cat">Cat</a></li>
       <li><a routerLink="/assignment-2">Assignment 2</a></li>
     </ul>
   </nav>
+  <router-outlet />
 </div>
 
-
-<router-outlet />

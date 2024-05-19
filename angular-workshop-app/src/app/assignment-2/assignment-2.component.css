@@ -46,3 +46,10 @@ form div {
     border-radius: 5px;
     white-space: pre-wrap;
   }
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+}
